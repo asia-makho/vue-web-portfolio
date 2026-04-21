@@ -57,13 +57,13 @@ const { texts } = useSiteState();
         <ProjectCard 
           :title="texts.proj1Title"
           :description="texts.proj1Desc"
-          image="/asia-web/images/matplotlib_heart.jpg"
+          image="images/matplotlib_heart.jpg"
           tech="Python, Matplotlib, Turtle"
         />
         <ProjectCard 
           :title="texts.proj2Title"
           :description="texts.proj2Desc"
-          image="/asia-web/images/horoskope_tgbot.png"
+          image="images/horoskope_tgbot.png"
           tech="Telegram Bot API, Python, MML"
         />
       </div>
