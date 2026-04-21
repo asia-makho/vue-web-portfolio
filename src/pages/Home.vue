@@ -55,17 +55,18 @@ const { texts } = useSiteState();
       <h2 class="section-title">{{ texts.projectsTitle }}</h2>
       <div class="grid-two">
         <ProjectCard
-         :title="texts.proj1Title"
-         :description="texts.proj1Desc"
-        image="images/matplotlib_heart.jpg" 
-        tech="Python, Matplotlib, Turtle"
+  :title="texts.proj1Title"
+  :description="texts.proj1Desc"
+  image="/vue-web-portfolio/images/matplotlib_heart.jpg" 
+  tech="Python, Matplotlib, Turtle"
 />
-        <ProjectCard 
-          :title="texts.proj2Title"
-          :description="texts.proj2Desc"
-          image="images/horoskope_tgbot.png"
-          tech="Telegram Bot API, Python, MML"
-        />
+
+<ProjectCard
+  :title="texts.proj2Title"
+  :description="texts.proj2Desc"
+  image="/vue-web-portfolio/images/horoskope_tgbot.png"
+  tech="Telegram Bot API, Python, MML"
+/>
       </div>
     </section>
 
