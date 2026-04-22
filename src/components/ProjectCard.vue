@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useSiteState } from '@/composables/useSiteState'; // Імпортуємо стан
+import { useSiteState } from '@/composables/useSiteState'; 
 
-// Отримуємо переклади
+// Отримуюю переклади
 const { texts } = useSiteState();
 
 defineProps<{

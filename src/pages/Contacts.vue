@@ -3,7 +3,6 @@ import { useSiteState } from '@/composables/useSiteState';
 
 const { texts } = useSiteState();
 
-// Ваш список контактів
 const contacts = [
   { icon: 'fas fa-envelope', label: 'Email', value: 'asiamakhomet@gmail.com', link: 'mailto:asiamakhomet@gmail.com' },
   { icon: 'fab fa-github', label: 'GitHub', value: 'github.com/asia-makho', link: 'https://github.com/asia-makho' },

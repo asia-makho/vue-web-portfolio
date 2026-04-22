@@ -40,7 +40,6 @@ export interface TranslationSchema {
   feelsLike: string;
   humidity: string;
   wind: string;
-  // 🌟 ОСЬ ЦІ КЛЮЧІ, ЯКИХ НЕ ВИСТАЧАЛО:
   todoNewTask: string;
   todoMyList: string;
   todoPlaceholder: string;
