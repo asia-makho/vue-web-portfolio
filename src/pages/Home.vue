@@ -147,7 +147,6 @@ img {
 /* СІТКА */
 .grid-two { 
   display: grid; 
-  /* minmax(18.75rem...) - це ті самі 300px, переведені в rem */
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); 
   gap: 1.5rem; 
   align-items: start;
