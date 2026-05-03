@@ -2,13 +2,15 @@
 import { useSiteState } from '@/composables/useSiteState';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
+import NavBar from './components/NavBar.vue'; // Імпортували - супер!
 
 const { theme } = useSiteState();
 </script>
 
 <template>
   <div :class="['app-container', theme]">
-    <Header />
+    <NavBar /> 
+    
     <main class="content">
       <router-view />
     </main>
@@ -54,7 +56,7 @@ body {
 .app-container.dark .card {
   background-color: #2d2d2d; 
   color: #ffffff; 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.4); /* Замінили 10px 30px на rem */
 }
 
 /* Налаштування заголовків у темній темі */
@@ -73,6 +75,6 @@ body {
 
 .content {
   flex: 1;
-  padding: 20px;
+  padding: 1.25rem; /* Замінили 20px на rem для виконання 3-го завдання */
 }
 </style>

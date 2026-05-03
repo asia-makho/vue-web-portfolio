@@ -93,7 +93,6 @@ export const translations: Record<'uk' | 'en', TranslationSchema> = {
     feelsLike: "Відчувається як",
     humidity: "Вологість",
     wind: "Вітер",
-    // Todo List UK
     todoNewTask: "Нове завдання",
     todoMyList: "Мій список",
     todoPlaceholder: "Що потрібно зробити?",

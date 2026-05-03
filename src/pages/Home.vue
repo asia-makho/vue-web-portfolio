@@ -102,34 +102,54 @@ const { texts } = useSiteState();
 <style scoped>
 /* ЗАГАЛЬНІ НАЛАШТУВАННЯ */
 .home-wrapper {
-  padding-bottom: 30px; 
+  padding-bottom: 2rem; /* 32px */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Vorokhta-img { 
+  width: 100%; 
+  max-width: 8.75rem; /* ~140px */
+  height: 6rem; /* ~95px */
+  object-fit: cover; 
+  border-radius: 0.75rem; /* 12px */
+  flex-shrink: 0; 
 }
 
 .section { 
-  max-width: 1100px; 
+  max-width: 1100px; /* max-width контейнера зазвичай залишають у px */
   margin: 0 auto;  
-  padding: 15px 20px; 
+  padding: 1rem 1.25rem; /* 16px 20px */
 }
 
 .card { 
-  background: white; 
-  padding: 18px 25px; 
-  border-radius: 20px; 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03); 
+  background: #ffffff;
+  padding: 1.125rem 1.5rem; /* 18px 24px */
+  border-radius: 1.25rem; /* 20px */
+  box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.03); 
   border: 1px solid rgba(0,0,0,0.02);
+  color: #334155; 
 }
 
 :global(.dark) .card { 
   background: #2d2d2d; 
-  border-color: #444;
+  color: #ffffff;
   box-shadow: none;
+}
+
+:global(.dark) .about-me-text p {
+  color: #ffffff !important; 
 }
 
 /* СІТКА */
 .grid-two { 
   display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  gap: 15px; 
+  /* minmax(18.75rem...) - це ті самі 300px, переведені в rem */
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); 
+  gap: 1.5rem; 
   align-items: start;
 }
 
@@ -139,13 +159,13 @@ const { texts } = useSiteState();
   margin: 0; 
   font-weight: 900; 
   color: #0f172a; 
-  letter-spacing: -1px;
+  letter-spacing: -0.0625rem; /* -1px */
 }
 
 .section-title { 
   font-size: 1.6rem; 
   font-weight: 900;
-  margin-bottom: 10px; 
+  margin-bottom: 0.625rem; /* 10px */
   color: #0f172a;
 }
 
@@ -153,11 +173,9 @@ const { texts } = useSiteState();
   font-size: 1.3rem;
   font-weight: 900;
   color: #0f172a;
-  margin-bottom: 8px;
-  padding-left: 5px;
+  margin-bottom: 0.5rem; /* 8px */
+  padding-left: 0.3rem; /* 5px */
 }
-
-h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 6px; color: #1e293b; }
 
 :global(.dark) .my-name, 
 :global(.dark) .section-title, 
@@ -168,27 +186,54 @@ h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 6px; color: #1e293b; }
 .hero-header-v2 { 
   display: flex; 
   justify-content: center; 
-  margin: 25px 0; 
+  margin: 1.5rem 0; /* 24px 0 */
 }
 
-.header-content-v2 { display: flex; align-items: center; gap: 20px; }
-.Me-logo-small { width: 90px; height: 90px; object-fit: cover; border-radius: 50%; }
-.hero-subtext { font-size: 1rem; color: #475569; margin-top: 5px; }
+.header-content-v2 { display: flex; align-items: center; gap: 1.25rem; /* 20px */ }
+.Me-logo-small { width: 5.625rem; height: 5.625rem; /* 90px */ object-fit: cover; border-radius: 50%; }
+.hero-subtext { font-size: 1rem; color: #475569; margin-top: 0.3rem; /* 5px */ }
 
 /* ABOUT ME (ПРО МЕНЕ) */
-.about-me-content { display: flex; gap: 20px; align-items: center; }
-.Vorokhta-img { width: 140px; height: 95px; object-fit: cover; border-radius: 12px; flex-shrink: 0; }
-.about-me-text p { font-size: 0.95rem; line-height: 1.5; margin-bottom: 6px; color: #334155; }
+.about-me-content { display: flex; gap: 1.25rem; align-items: center; } /* 20px */
+.about-me-text p { font-size: 0.95rem; line-height: 1.5; margin-bottom: 0.375rem; /* 6px */ }
 
 /* СПИСКИ */
-.compact-list { padding-left: 18px; margin: 0; }
-.compact-list li { margin-bottom: 4px; font-size: 0.9rem; }
+.compact-list { 
+  padding-left: 1.125rem; /* 18px */
+  margin: 0.625rem 0 0 0; /* 10px 0 0 0 */
+}
+.compact-list li { margin-bottom: 0.25rem; /* 4px */ font-size: 0.9rem; }
+.small-text { font-size: 0.85rem; color: #64748b; margin-bottom: 0.125rem; /* 2px */ }
 
-.small-text { font-size: 0.85rem; color: #64748b; margin-bottom: 2px; }
+/* =========================================
+   BREAKPOINTS (Адаптивність)
+   ========================================= */
 
-@media (max-width: 850px) {
-  .grid-two { gap: 15px; }
-  .section { padding: 10px 20px; }
+/* Планшети */
+@media (max-width: 1024px) {
+  .my-name { font-size: 2.8rem; }
+  .section-title { font-size: 1.4rem; }
+  .section { padding: 1rem; }
+}
+
+/* Телефони */
+@media (max-width: 768px) {
   .my-name { font-size: 2.2rem; }
+  
+  .header-content-v2 { 
+    flex-direction: column; 
+    text-align: center; 
+  }
+  
+  .about-me-content { 
+    flex-direction: column; 
+    text-align: center; 
+  }
+  
+  .Vorokhta-img { 
+    max-width: 100%; 
+    height: 12.5rem; /* 200px */
+    margin-bottom: 1rem; 
+  }
 }
 </style>
