@@ -3,6 +3,10 @@ name: Test and Deploy Portfolio
 on:
   push:
     branches: [main] 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   test:
