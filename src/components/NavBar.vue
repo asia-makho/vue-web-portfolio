@@ -15,8 +15,8 @@ const toggleMenu = () => {
 
 <template>
   <header class="navbar">
-    <div class="logo">Моє Портфоліо</div> 
-    
+    <div class="logo">{{ texts.logo }}</div>
+
     <!-- Кнопка-гамбургер (видно тільки на мобільних) -->
     <button class="menu-toggle" @click="toggleMenu">
       ☰
