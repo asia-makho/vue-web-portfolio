@@ -1,4 +1,5 @@
 export interface TranslationSchema {
+  logo: string;
   navHome: string;
   navContacts: string;
   navWeather: string;
@@ -52,6 +53,7 @@ export interface TranslationSchema {
 
 export const translations: Record<'uk' | 'en', TranslationSchema> = {
   uk: {
+    logo: "Моє Портфоліо",
     navHome: "Головна",
     navContacts: "Контакти",
     navWeather: "Погода та час",
@@ -103,6 +105,7 @@ export const translations: Record<'uk' | 'en', TranslationSchema> = {
     todoEmpty: "Список порожній..."
   },
   en: {
+    logo: "My Portfolio",
     navHome: "Home",
     navContacts: "Contacts",
     navWeather: "Weather & Time",
