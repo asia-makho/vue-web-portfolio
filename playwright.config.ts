@@ -9,6 +9,14 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
 
+  webServer: {
+    command: 'npm run dev',
+    url: 'http://localhost:5173/vue-web-portfolio/',
+    reuseExistingServer: !process.env.CI,
+    timeout: 120000, // 2 хвилини на запуск
+  },
+
+
   /* Налаштування перевірки для різних браузерів */
   projects: [
     {
